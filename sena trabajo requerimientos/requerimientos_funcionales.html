@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimientos Funcionales</title>
+    <link rel="stylesheet" href="./assets/css.css" type="text/css">
+    
+</head>
+<body>
+<header>
+<table class="table">
+    <tr>
+        <td rowspan="2" style="width: 20%;">
+            <img src="assets/static/img/logoSena.png" alt="logo Sena">
+        </td>
+        <td class="header" style="width: 60%;">
+            SERVICIO NACIONAL DE APRENDIZAJE SENA<br>
+            SISTEMA INTEGRADO DE GESTIÓN<br>
+            PROCEDIMIENTO GESTIÓN DE SISTEMAS DE INFORMACIÓN<br>
+            REQUERIMIENTOS FUNCIONALES
+        </td>
+        <td style="width: 20%;">
+            <div>Versión</div>
+            <hr class="aaa">
+            <div>Número de código</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">Nombre proyecto</td>
+    </tr>
+    <tr>
+        <td>Edición</td>
+        <td>Versión 1.1</td>
+        <td>Fecha: 2023</td>
+    </tr>
+</table>
+</header>
+
+<div class="padre">
+    <div class="inicio">
+    <h1>Requerimientos Funcionales</h1>
+    </div>
+
+<div class="contenedor">
+        <table class="funcionales">
+            <tr>
+                <th colspan="7">requerimiento-001 inicio de sesión</th>
+        
+            </tr>
+            <th>prioridad: <br> complejidad</th>
+            <td>alta:x <br> alta :</td>
+            <td>medio : <br> medio :x</td>
+            <td>bajo :x <br> bajo  :</td>
+            
+            <tr>
+                <th>entradas </th>
+                <td colspan="4"><ul><li>documento de indetidad </li><li>contraseña </li><li>boton de entrada</li></ul></td>
+                
+            </tr>
+            <tr>
+                <th>salidas </th>
+                <td colspan="4"><ul><li>redireción al panel correspondiente al rol de usuario </li><br><li>mensajes de error o exito </li></ul></td>
+            </tr>
+            
+            <tr>
+                <th>rol </th>
+                <td colspan="4"><ul><li>administador</li><br><li>aprendiz </li> <br> <li>intructor</li></ul></td>
+            </tr>
+        </table></div>
+    <div>
+            <h1><b>Incion de sesión</b></h1>
+            <ol></ol>
+            <P>El sistema debe contar con un modulo de inicio de sesión (login) que permita el acceso a tres tipos de usarios.<br> 
+                administrador, instructor y aprendises este modulo debe validar las credenciales del usuario y dependiendo de rol, redirigirlo 
+                al interfaz correspondiente con las funcionalidades especificas asignadas a cada tipo de rol.</P><br>
+                <h3><b>Acceso a modulo de login </b></li></h3>
+                <p>el usuario accede al sistema atraves de una pantalla inicial donde se solicita </p>
+                <ul><li>documento de identidad </li></ul>
+                <ul><li>contraseña </li></ul>
+            
+                <h3><b>Validación de credenciales</b></h3>
+                    <p>El sistema verifica las credenciales integradas:</p>
+                    <p><b>usuario:</b> Bebe coincidir con un registro de existente en la base de datos </p>
+                    
+                <p></p><b>Contraseña:</b>debe concidir con la almacenada de manera segura. </p>
+            
+                    <p>
+                    Si las credenciales son válidas, el sistema identifica los permisos suministradores por el administrador a la hora de crear su perfil.  asociado al usuario y lo redirige a su respectiva interfaz.
+            
+                    Si las credenciales no son válidas, se muestra un mensaje de error como:
+            
+                    "Usuario o contraseña incorrectos. Por favor, intente nuevamente."
+                
+                    </p>
+                    <h3><b>Manejo de errores</b></h3>
+                    <p>
+                        Si las credenciales son incorrectas o el usuario intenta acceder sin estar registrado, el sistema muestra un mensaje de error claro y específico que indicara: “Usuario o contraseña invalido”
+                    </p>
+            
+                </p>
+            
+            </ol></div>
+<img src="assets/static/img/inicio-sesion.png" alt="inicio-sesion" class="interfaz">
+        <hr>
+<div class="contenedor">
+            <table class="funcionales">
+                <tr>
+                    <th colspan="7">requerimiento-002 modulo de usuario</th>
+            
+                </tr>
+                <th>prioridad: <br> complejidad</th>
+                <td>alta:x <br> alta :</td>
+                <td>medio : <br> medio :x</td>
+                <td>bajo : <br> bajo  :</td>
+                
+                <tr>
+                    <th>entradas </th>
+                    <td colspan="4"><ul><li>Nombre compreto: nombre y apellido del usuario  </li><li>Número de telefono  </li>
+                        <li>Coreo electronico </li><li>Contraseña: Creada por el usuario o asignada temporalmente por el sistema</li>
+                        <li>Número de identificación: Documento único que identifica al usuario.</li><li>Rol: Selección entre Aprendiz, Instructor o Administrador</li><li>Sistema permisos</li></ul></td>
+                    
+                </tr>
+                <tr>
+                    <th>salidas </th>
+                    <td colspan="4"></td>
+                </tr>
+                
+                <tr>
+                    <th>rol </th>
+                    <td colspan="4"><ul><li>Administador</li><br><li>Instructor</li> <br> <li>Aprendiz</li></ul></td>
+                </tr>
+            </table></div>
+
+    <div>
+                <h1><b>Crear usuario </b></h1>
+                <ol></ol>
+                <P>El sistema debe permitir la creación de usuarios asociados a uno de los tres roles definidos: Aprendiz, Instructor o Administrador. Cada usuario debe contar con datos y permisos personalizados según las funcionalidades que le corresponden.</P><br>
+                    <ul><li><b>Nombre completo:</b> Nombre y apellidos del usuario. </li></ul>
+                    <ul><li>Número de telefono</li></ul>
+                    <ul><li> Correo electronico </li></ul>
+                    <ul><li> Contraseña: Creada por el usuario o asignada temporalmente por el sistema. </li></ul>
+                    <ul><li>  Número de identificación: Documento único que identifica al usuario. </li></ul>
+                    <ul><li> Rol: Selección entre Aprendiz, Instructor o Administrador. </li></ul>
+                    <ul><li> sistemas de permisos </li></ul>
+                
+                
+                    <h2><b> Datos iniciales por el rol</b></h2>
+                    <h3>Rol : aprendiz</h3>
+                
+                    <ul><li><b>ficha de formación:</b> Número único que identifica al grupo al que pertenece el aprendiz.</li></ul>
+                    <ul><li><b>numero de identificación:</b>: Para garantizar la autenticación correcta</li></ul>
+                    <ul><li><b>permisos:</b></li></ul>
+                    <ul><li>Etapa lectiva (Descargar reportes de asistencia, consultar su horario, visualizar su historial de asistencias)</li></ul>
+                    <ul><li>Etapa productiva (subir bitácoras, enviar solicitudes, relleno de formato)</li></ul>
+                
+                        <h3><b>Rol: instructor</b></h3>
+                        <ul><li><b>especialidad:</b>campo relacionada con el campo de enseñanza</li></ul>
+                        <ul><li><b>grupo asignados:</b>lista de fichas a las que imparte formación</li></ul>
+                        <h2>Permisos: </h2>
+                        <ul><li>etapa productiva ( enviar bitácoras)</li></ul>
+                        <ul><li>consulta de horarios de sus grupos </li></ul>
+                        <ul><li>marcar la asistencia</li></ul>
+            </ol></div>
+<img src="assets/static/img/crear-usuario.png" alt="" class="interfaz">
+            <hr>
+
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                        <th colspan="7">requerimiento-002,1 Modulo Buscar Usuario</th>
+                
+                    </tr>
+                    <th>prioridad: <br> complejidad</th>
+                    <td>alta:x <br> alta :</td>
+                    <td>medio : <br> medio :x</td>
+                    <td>bajo : <br> bajo  :</td>
+                    
+                    <tr>
+                        <th>entradas </th>
+                        <td colspan="4"><ul><li>Rol </li><li>Número de identificación </li><li>Nombre  </li><li></li></ul></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>salidas </th>
+                        <td colspan="4"> <ul><li>Redireccion al registro de usuario</li></ul></td>
+                    </tr>
+                    
+                    <tr>
+                        <th>rol </th>
+                        <td colspan="4"><ul><li>Administador</li> <li>Instructor</li></ul></td>
+                    </tr>
+        </table></div>
+    <div>
+            <h1><b>Buscar usuario </b></h1>
+            
+            <P>El submódulo "Usuario" permite gestionar y buscar usuarios mediante filtros, número de identificación o nombre. Facilita
+                la administración del estado de los aprendices, incluyendo la transición de etapa lectiva a etapa productiva, actualizando 
+                sus permisos automáticamente según la nueva etapa. Además, proporciona una interfaz clara para localizar usuarios y realizar 
+                modificaciones rápidas y precisas en su información y estado dentro del sistema</P>
+                <ol><li><b>Funcionalidades principales:</b></li>
+                <ul><li>Búsqueda de Usuario: </li>
+                    <ul><li>Filtros Disponibles:</li>
+                        <ul><li><b>Rol:</b> Filtra usuarios segun su rol(Aprendiz, instructor, administador)</li></ul>
+                        <ul><li><b>Número de identificación:</b>permite encontrar un usuario especifico ingresando su identificación unica</li></ul>
+                        <ul><li><b>Nombre:</b> Realiza búsquedas por coincidencias parciales o completas con el nombre del usuario</li></ul>
+                        </ul></ul></b>
+                <ul><li>Cambio de Etapa de un Aprendiz:</li>
+                    <ul><li>Permite pasar a un aprendiz de la etapa lectiva a la etapa productiva.</li></ul>
+                    <ul><li>Al realizar el cambio, el sistema:</li>
+                        <ul><li>Actualiza el estado del aprendiz</li></ul>
+                        <ul><li>Otorga los permisos específicos necesarios para la etapa productiva (subir bitácoras, enviar solicitudes, relleno de formato).</li></ul>
+                    </ul></ul></li>
+                <li><b>Validaciones Necesarias:</b></li>
+                    <ul><li></li></ul></ol>
+                    <ul><li>Permite pasar a un aprendiz de la etapa lectiva a la etapa productiva.</li></ul>
+                    <ul><li>Al realizar el cambio, el sistema:</li></ul>
+                    <ul><li>actualiza el estado del aprendiz</li> </ul>
+                    <ul><li>Otorga los permisos específicos necesarios para la etapa productiva (subir bitácoras, enviar solicitudes, relleno de formato).</li></ul>
+                
+                
+                    <h2><b> 2.validación necesarias</b></h2>
+                    <h3>Filtros de busqueda:</h3>
+                
+                
+                    <ul><li>Al menos un filtro debe estar activo para realizar la búsqueda. </li></ul>
+                    <ul><li> Los resultados deben mostrar datos del usuario (Nombre completo: Nombre y apellidos del usario.)</li></ul>
+                    <ul><li> numero de telefono</li></ul>
+                    <ul><li> correo electronico</li></ul>
+                    <ul><li> Contraseña: Creada por el usuario o asignada temporalmente por el sistema.</li></ul>
+                    <ul><li> Número de identificación: Documento único que identifica al usuario. </li></ul>
+                    <ul><li>(Rol: Aprendiz, Instructor o Administrador).</li></ul>
+                    <h3>Cambios de etapa: </h3>
+                    <ul><li>Verificar que el aprendiz cumple con los requisitos necesarios para la transición (completar la fase de etapa lectiva).</li></ul>
+                    <ul><li>Notificar al usuario sobre el éxito o fallo del cambio de etapa.</li></ul>
+                    
+                        <h3><b>Rol aprendiz</b></h3>
+                            <ol><li>El usuario ingresa el nombre, rol o número de identificación en el filtro.</li>
+                                <li>Se muestra una lista con los resultados correspondientes.</li>
+                                <li>Para aprendices en etapa lectiva, aparece un botón de acción para cambiar a etapa productiva.</li>
+                                <li>El usuario confirma el cambio.</li>
+                                <li>El sistema:
+                                    <ul><li>Actualiza el estado del aprendiz</li></ul>
+                                    <ul><li>Otorga los permisos necesarios para la nueva etapa.</li></ul>
+                                    <ul><li>Notifica al administrador y al aprendiz.</li></ul>
+                                </li></ol>
+            </div>
+<img src="assets/static/img/buscar-usuario2.png" alt="crear-usuario" class="interfaz">
+<img src="assets/static/img/buscar-usuario.png" alt="" class="interfaz">
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                        <th colspan="7">requerimiento-003 Modulo Horario</th>
+                
+                    </tr>
+                    <th>prioridad: <br> complejidad</th>
+                    <td>alta:x <br> alta :</td>
+                    <td>medio : <br> medio :x</td>
+                    <td>bajo : <br> bajo  :</td>
+                    
+                    <tr>
+                        <th>entradas </th>
+                        <td colspan="4"><ul><li>rol </li><li>Nombre del aprendiz o instructor </li><li>Numero de identificacion   </li><li>ficha de formacion</li></ul></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>salidas </th>
+                        <td colspan="4"> </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>rol </th>
+                        <td colspan="4"><ul><li>administador</li> <li>instructor</li></ul></td>
+                    </tr>
+                </table></div>
+                
+                <div>
+                <h1>Modulo Horario</h1>
+                <h2><b>1.Descripción fucional  </b></h2>
+                <p>
+                    El módulo de "Asignación de Horarios" permite a los administradores gestionar los horarios de aprendices y instructores de manera eficiente. A través de este módulo, se pueden asignar horarios específicos a grupos de estudiantes o instructores, asegurando que cada actividad esté organizada de acuerdo con las necesidades del sistema educativo.   
+                </p>
+                
+                <h2><b>2.funcionaledades principales : </b></h2>
+                
+                    <ul><li><b>1. busqueda de usuarios (aprendices e instructores ) </b></li></ul>
+                    <ul><li><b>filtros disponibles:</b></li></ul>
+                    <ul><li>nombre del aprendiz o instructor </li></ul>
+                    <ul><li>numero de identificacion </li></ul>
+                    <ul><li>ficha de formacion (para aprendices)</li></ul>
+                
+                    <ul><li><b>Resultado de busqueda:</b> Mostrar una lista con la informacion relevante,como :</li>
+                    
+                    <ul><li>nombre completo </li></ul>
+                    <ul><li>numero de identificación </li></ul>
+                    <ul><li>rol (Aprendizes o instructor) </li></ul></ul>
+                
+                    <h3><b>2.Asignación de horarios:</b></h3>
+                    <ul><li>Seleccionar el usuario (aprendiz o instructor) al que se asignará el horario.</li></ul>
+                    <ul><li>Seleccionar el horario, especificando:</li></ul>
+                    <ul><li>Día(s) de la semana.</li></ul>
+                    <ul><li>Horario (bloques de tiempo).</li></ul>
+                    <ul><li>aula o ubicación</li></ul>
+                    <ul><li>actividad o curso asignado </li></ul>
+                    <ul><li>Posibilidad de asignar horarios grupales para aprendices de una misma ficha de formación</li></ul>
+                    <h3<ul><li><b>3. visualización del horario asiganado </b></li></ul></h3>
+                    <ul><li>Mostrar una vista previa del horario asignado antes de confirmarlo.</li></ul>
+                    <ul><li>Indicar si existen conflictos de horario para el usuario (aprendiz o instructor).</li></ul> 
+                    <h4><ul><li><b>4. confirmación de Asignación</b></li></ul></h4>
+                    <ul><li>Botón "Confirmar Asignación" para guardar los horarios en el sistema.</li></ul> 
+                    <ul><li>Mensaje de confirmación, incluyendo:</li></ul> 
+                    <ul><li>Detalles del horario asignado.</li></ul> 
+                    <ul><li>Indicaciones en caso de conflicto (si no se puede asignar un horario debido a superposición o disponibilidad).</li></ul> 
+                    <h4><ul><li><b>5. Edición y eliminación de horarios:</b></li></ul></h4>
+                
+                    <ul><li>Función para modificar horarios previamente asignados, permitiendo:</li></ul> 
+                    <ul><li>Cambiar días, horas o actividades</li></ul> 
+                    <ul><li>Reasignar horarios en caso de ajustes necesarios.</li></ul> 
+                    <ul><li>Opción para eliminar horarios asignados si ya no son requeridos.</li></ul> 
+                    
+                    <hr>
+                    
+                    <h3><b>3. validación necesarias</b></h3>
+                    <ul><li>Verificar que el usuario (aprendiz o instructor) esté registrado en el sistema.</li></ul> 
+                    <ul><li>Validar la disponibilidad del usuario para el horario asignado, evitando superposición con horarios previamente establecidos.</li></ul> 
+                    <ul><li>Confirmar que las aulas o ubicaciones asignadas estén disponibles para los bloques seleccionados</li></ul>
+                    <ul><li>En el caso de grupos, validar que todos los aprendices de una ficha tengan el mismo horario asignado</li></ul>
+                    
+                    <hr>
+                    
+                    <h3><b>4.pantallas principales </b></h3>
+                    <h4><b>1. pantalla de busqueda </b></h4>
+                    <ul><li>Campo de búsqueda con filtros (nombre, identificación, ficha, etc.).</li></ul>
+                    <ul><li>Lista de resultados con opciones para seleccionar al usuario.</li></ul>
+                    <h4><ul><Li><b>2. pantalla de asignación</b></Li></ul></h4>
+                    <ul><li>Formulario para ingresar los detalles del horario: día(s), hora, ubicación y actividad.</li></ul>
+                    <h4><b>3. pantalla de confirmación</b></h4>
+                    <ul><li>Mensaje de confirmación tras la asignación exitosa.</li></ul>
+                    <ul><li>Opción para volver a editar o agregar un nuevo horario.</li></ul>
+                    
+                    <hr>
+                
+                  <h3><b>compatibilidad</b></h3>
+                  <p>
+                    El módulo debe integrarse con el sistema general para sincronizar los horarios asignados con los módulos de visualización de horarios (para aprendices e instructores), asistencia y reportes.
+                Este requerimiento funcional garantiza una gestión estructurada de horarios, optimizando la organización de actividades y evitando conflictos en la asignación de tiempos para aprendices e instructores.
+                
+                  </p>
+            </ol>
+            <img src="assets/static/img/horarios.png" alt="" class="interfaz">
+        </div>
+
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                          <th colspan="7">requerimiento-004 modulo solicitar ambiente  </th>
+                
+                    </tr>
+                    <th>prioridad: <br> complejidad</th>
+                    <td>alta:x <br> alta :</td>
+                    <td>medio : <br> medio :x</td>
+                    <td>bajo : <br> bajo  :</td>
+                    
+                    <tr>
+                        <th>entradas </th>
+                        <td colspan="4"><ul><li>fecha y hora</li></ul></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>salidas </th>
+                        <td colspan="4"><ul><li>Redirección al panel correspondiente al rol del usuario</li><li>mensajes de error o extito </li></ul> </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>rol </th>
+                        <td colspan="4"><ul><li>administador</li> <li>instructor</li></ul></td>
+                    </tr>
+                </table></div>
+                <div>
+                <h1>Modulo Solicitar Ambiente</h1>
+                <h3><b>1. discripción funcional:</b></h3>
+                <p>
+                    Este módulo permitirá a los usuarios (administradores o instructores) consultar los ambientes disponibles y realizar solicitudes para reservar un ambiente específico según sus necesidades.
+                
+                </p>
+                <h3><b>2. funcionalidades principales</b></h3>
+                      <h3><b>1.visualizacion de ambiente disponible:</b></h3>
+                      <ul><li>Lista de ambientes organizados por:</li></ul>
+                      <ul><li>Nombre o número del ambiente.</li></ul>
+                      <ul><li>capacidad</li></ul>
+                      <ul><li>Estado actual (Disponible, Ocupado, En mantenimiento).</li></ul>
+                      <ul><li>filtro por:</li></ul>
+                      <ul><li>fecha y hora </li></ul>
+                <h3><b>3. seguimiento de solicitudes</b></h3>  
+                
+                <ul><li>Sección donde los usuarios pueden ver:</li></ul>
+                <ul><li>Estado de sus solicitudes (Pendiente, Aprobada, Rechazada).</li></ul>
+                <ul><li>Detalles del ambiente solicitado</li></ul>
+                
+                <h3><b>3.validaciones necesarias</b></h3>
+                
+                <ul><li>Mostrar solo los ambientes disponibles según los filtros aplicados.</li></ul>
+                <ul><li>No permitir solicitudes para horarios ya ocupados por otro usuario.</li></ul>
+                <ul><li>Verificar que el solicitante tenga permisos para realizar la solicitud.</li></ul>
+                <ul><li>Notificar al usuario si un ambiente solicitado no está disponible después de confirmar la solicitud</li></ul>
+                    
+                
+                </ol>
+            <img src="assets/static/img/solicitud-ambiente.png" alt="" class="interfaz">
+            </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                          <th colspan="7">requerimiento-005 modulo de mensajes  </th>
+                
+                    </tr>
+                    <th>prioridad: <br> complejidad</th>
+                    <td>alta:x <br> alta :</td>
+                    <td>medio : <br> medio :x</td>
+                    <td>bajo : <br> bajo  :</td>
+                    
+                    <tr>
+                        <th>entradas </th>
+                        <td colspan="4"><ul><li>asunto</li><li>cuerpo mensaje</li></ul></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>salidas </th>
+                        <td colspan="4"> </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>rol </th>
+                        <td colspan="4"><ul><li>administador</li> <li>instructor</li><li>aprendiz</li></ul></td>
+                    </tr>
+                </table></div>
+                <div>
+                <h1><b>Modulo de mensajes</b></h1>
+                <h3><b>1.discripción funcional</b></h3>
+                <p>
+                    El usuario necesita un módulo llamado "Mensaje" que permita enviar notificaciones personalizadas a otros usuarios del sistema, como aprendices, instructores o administradores. Este módulo facilita la comunicación directa y el seguimiento de notificaciones enviadas.
+                </p>
+                
+                <hr>
+                
+                <h3><b>2. funcionalidades principales : </b></h3>
+                    <b>1. creaciones de notificaciones</b>
+                <ol>
+                     <ul><li>La instructora puede redactar mensajes personalizados que incluyan:</li></ul>
+                     <ul><li><b>asunto</b></li></ul>
+                     <ul><li><b>cuerpo del mensaje</b></li></ul>
+                     <ul><li>adjuntar archivos (opcional)si es necesario </li></ul>
+                </ol>
+            
+                <hr>
+                
+                <b>2. seleccion de destimatarios</b>
+                  <ol>
+                
+                     <ul><li>enviaar notificaciones a :</li></ul>
+                     <ul><li>usuarios individuales (identificación)</li></ul>
+                     <ul><li>grupo por ficha</li></ul>
+                
+                    </ol>
+                 <b>3. historira de mensajes enviado </b>
+                        
+                         <ul><li>lista de notificaciones enviadas con detalles: </li></ul>
+                         <ul><li>fecha y hora de envio </li></ul>
+                         <ul><li>destinatarios </li></ul>
+                         <ul><li>estado (entregado o pendiente) </li></ul>
+                
+                 <b>3. validaciones necesarias </b>
+                
+                     <ul><li><b>seleccion de destinatarios:</b>: Verificar que los usuarios seleccionados existen en el sistema.</li></ul>
+                     <ul><li><b>mensajes duplicados :</b> envier envios repetidos </li></ul>
+                     <img src="assets/static/img/mensajes.png" alt="" class="interfaz">
+                </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                          <th colspan="7">requerimiento-006 asignar instructor    </th> 
+                
+                    </tr>
+                    <th>prioridad: <br> complejidad</th>
+                    <td>alta:x <br> alta :</td>
+                    <td>medio : <br> medio :x</td>
+                    <td>bajo : <br> bajo  :</td>
+                    
+                    <tr>
+                        <th>entradas </th>
+                        <td colspan="4"><ul><li>nombre del aprendiz</li><li>ficha de formación</li><li>ficha de ingreso a la etapa produciva </li></ul></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>salidas  </th>
+                        <td colspan="4"><ul><li>lista de instruciones disponibles con información</li></ul>  </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>rol </th>
+                        <td colspan="4"><ul><li>administador</td>
+                    </tr>
+                
+                
+                </table></div>
+                <div>
+                <h1><b>Modulo asignar instructor </b></h1>
+                <b>1.discripción funcional:</b>
+                <p>
+                 El usuario necesita un módulo que permita asignar instructores a aprendices en etapa productiva. Este módulo debe validar si el aprendiz ya tiene un instructor asignado antes de completar la nueva asignación 
+                </p>
+                <ol>
+                <h3><b>2. funcionalidades principales:</h3></b><br>
+                <b>1.visualizacion de aprencices elegibles </b>
+                <
+                    <ul><li>lista de aprendices que ingresa a la etapa productiva  y aun no tiene instructor asignado </li></ul>
+                    <ul><li>opciones de filtro :</li></ul>
+                    <ul><li>Nombre del aprendiz</li></ul>
+                    <ul><li>ficha de formación</li></ul>
+                    <ul><li>fecha de ingreso de etapa productiva </li></ul>
+                
+                </ol>
+                <ol>
+                    <h3><b>2. selección de instructores:</b></h3>
+                        <ul><li>lista de instructores disponibles con informacion como:</li></ul>
+                        <ul><li>especialidad</li></ul>
+                        <ul><li>numero de aprendises ya asignados </li></ul>
+                        <ul><li>disponibilidad actual </li></ul>
+                </ol>
+                <ol>
+                    <h3><b>asignación y validación:</b></h3>
+                        <ul><li>Antes de asignar, el sistema verifica:</li></ul>
+                        <ul><li>si el aprendiz ya tiene un instructor asignado</li></ul>
+                        <ul><li>la disponibilidad del instructor seleccionado </li></ul>
+                        <ul><li>confirmacion visual de la asignacion exitosa</li></ul>
+                
+                </ol>
+                <ol>
+                    <h3><b>historial de asignaciones</b></h3>
+                        <ul><li>registro de asignaciones realizadas, mostrando :</li></ul>
+                        <ul><li>aprendiz asignado </li></ul>
+                        <ul><li>instructor asignado </li></ul>
+                        <ul><li>fecha y hora de la asignacion</li></ul>
+                </ol>
+                <h3><b>validaciones necesarias </b></h3>
+                <ul><li>no permitir asignar un aprendiz a mas un instructor</li></ul>
+<img src="assets/static/img/asignar-instructor.png" alt="" class="interfaz">
+            </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                          <th colspan="7">requerimiento-007 Modulo Horarios   </th> 
+                
+                    </tr>
+                    <th>prioridad: <br> complejidad</th>
+                    <td>alta:x <br> alta :</td>
+                    <td>medio : <br> medio :x</td>
+                    <td>bajo : <br> bajo  :</td>
+                    
+                    <tr>
+                        <th>entradas </th>
+                        <td colspan="4"><ul><li>boton para entrar al modulo </li></ul></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>salidas  </th>
+                        <td colspan="4"><ul><li>tabla de horarios </li></ul>  </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>rol </th>
+                        <td colspan="4"><ul><li>administador</li><li>instructor</li></td>
+                    </tr>
+                </table></div>
+                <div>
+                <h1><b>Horarios </b></h1>
+                <p>
+                 El módulo "Horarios" permite al instructor gestionar su programación semanal, mostrando los cursos que le corresponden cada día. También facilita la interacción directa para tomar la asistencia de los aprendices asignados en un día específico  
+                </p>
+                <h3>funcionalidades principales </h3>
+                <ol>
+                    <b>1. visualizacion del horario semanal:</b>
+                    <ul><li>Al ingresar al módulo, se despliega una tabla en la parte derecha con los días de la semana.</li></ul>
+                    <ul><li>cada dia de muestra </li></ul>
+                    <ul><li>nombre del curso asignado </li></ul>
+                    <ul><li>Horario correspondiente (bloques que le correspondes)</li></ul>
+                    <ul><li>Ubicación o aula (si aplica).</li></ul>
+                    
+                </ol>
+            <img src="assets/static/img/horarios.png" alt="" class="interfaz">
+            </div>
+                
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                <tr>
+                      <th colspan="7">requerimiento-008 Modulo Asistencia  </th> 
+                
+                </tr>
+                <th>prioridad: <br> complejidad</th>
+                <td>alta:x <br> alta :</td>
+                <td>medio : <br> medio :x</td>
+                <td>bajo : <br> bajo  :</td>
+                
+                <tr>
+                    <th>entradas </th>
+                    <td colspan="4"><ul><li><b>boton en la tabla de horario </b> </li></ul></td>
+                    
+                </tr>
+                <tr>
+                    <th>salidas  </th>
+                    <td colspan="4"><ul><li>lista de estudiantes asignados </li></ul>  </td>
+                </tr>
+                
+                <tr>
+                    <th>rol </th>
+                    <td colspan="4"><ul><li>administador</li><li>instructor</li></td>
+                </tr>
+                </table></div>
+                <div>
+                <h1><b>Modulo Asistencia</b></h1>
+                <ul><li><b>interación con los días</b></li></ul>
+                <ul><li>Al presionar un día, de la tabla de horarios se despliega una lista de aprendices inscritos en el curso asignado para ese día.</li></ul>
+                <ul><li>Información de los aprendices:</li></ul>
+                <ol>
+                <ul><li>nombre completo</li></ul>
+                <ul><li>Numero de identificación</li></ul>
+                <ul><li>estado actual de la asistencia (pendiente, presente, ausencia)</li></ul>
+                
+                </ol>
+                <ul><li><b>integración con la funcinalidad de asistencia</b></ul></li>
+                <ul><li>Desde la lista de aprendiz, el instructor puede tomar la asistencia directamente para el curso y el día seleccionados.</li></ul><br>
+                <ul><li><b>Validaciones necesarias:</b></li></ul>
+                <ul><li>mostrar unicamente los cursos asignados al instructor </li></ul>
+                <ul><li>bloquear la toma de asistncia si el dia no corresponde al actual </li></ul>
+                <p>Los horarios deben sincronizarse con la programación general del sistema</p>
+        <img src="assets/static/img/asistencia.png" alt="" class="interfaz">
+            </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                <tr>
+                      <th colspan="7">requerimiento-009 Modulo Reporte   </th> 
+                
+                </tr>
+                <th>prioridad: <br> complejidad</th>
+                <td>alta:x <br> alta :</td>
+                <td>medio : <br> medio :x</td>
+                <td>bajo : <br> bajo  :</td>
+                
+                <tr>
+                    <th>entradas </th>
+                    <td colspan="4"><ul><li><b>boton para entrar al modulo </b> </li><b><li>filtros de busqueda </li></b></ul></td>
+                    
+                </tr>
+                <tr>
+                    <th>salidas  </th>
+                    <td colspan="4"><ul><li>resultado de búsqueda </li></ul>  </td>
+                </tr>
+                
+                <tr>
+                    <th>rol </th>
+                    <td colspan="4"><ul><li>administador</li><li>instructor</li><li>aprendiz</li></ul></td>
+                </tr>
+                </table></div>
+                <div>
+                <h1><b>Modulo de Reporte </b></h1>
+                <h3><b>1.discripción :</b></h3>
+                <p>El módulo permite a los usuarios descargar reportes personalizados basados en los registros de asistencias. Los reportes se generan utilizando filtros específicos según el rol del usuario que realiza la búsqueda</p><br>
+                <h3><b>funcionalidades principales : </b></h3>
+                <ol>
+                <ul><li>los filtros disponible depende del rol del usuario </li></ul>
+                         <ul><li><b>aprendiz:</b>buscar reportes de su propia asistencia </li></ul>
+                         <ul><li><b>instructor:</b>buscar reportes de los aprendices </li></u>
+                         <ul><li><b>administador:</b>buscar reportes de todos los usuarios registrado en el sistencia</li></ul>
+                         <ul><li>opciones de filtro comunes:</li></ul>
+                         <ul><li>nombre de numero de identificador </li></ul>
+                         <ul><li>ficha de formación</li></ul>
+                         <ul><li>rango de fechas </li></ul>
+                 <h3><b>2.generación del reporte :</b></h3>
+                 <ul><li>reporte detallado con información como:</li></ul>
+                        <ul><li>Nombre del aprendiz</li></ul>
+                        <ul><li>fecha de estado de asistencia </li></ul>
+                </ol>
+                <h3><b>3. descarga de reporte</b></h3>
+                <ol>
+                <ul><li>formato disponible :PDF, Excel</li></ul>
+                <ul><li>Archivo generado con un nombre estándar (ejemplo:"Reporte Asistencias_[Fecha].pdf").</li></ul>
+                
+                </ol>
+                <h3><b>3. validaciones necesaria</b></h3>
+                <ul><li>Verificar los permisos del usuario para acceder a los datos solicitados.</li></ul>
+                <ul><li>Validar la existencia de registros para el filtro aplicado.</li></ul>
+                <ul><li>Limitar los reportes descargados al ámbito de acción del usuario (e.g., un aprendiz solo puede descargar sus propios reportes).</li></ul>
+            <img src="assets/static/img/reporte.png" alt="" class="interfaz">
+            </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                <tr>
+                  <th colspan="7">requerimiento-0010 Modulo Etapa Practica  </th> 
+                
+                </tr>
+                <th>prioridad: <br> complejidad</th>
+                <td>alta:x <br> alta :</td>
+                <td>medio : <br> medio :x</td>
+                <td>bajo : <br> bajo  :</td>
+                
+                <tr>
+                <th>entradas </th>
+                <td colspan="4"><ul><li>boton para entrar al modulo  </li></ul></td>
+                
+                </tr>
+                <tr>
+                <th>salidas  </th>
+                <td colspan="4"><ul><li>Lista de fichas asociadas a los estudiantes que esta supervisando </li></ul> </td>
+                </tr>
+                
+                <tr>
+                <th>rol </th>
+                <td colspan="4"><ul><li>instructor</li></ul></td>
+                </tr>
+                </table></div>
+                <div>
+                <h1><b>Modulo Etapa Practica </b></h1>
+                <b>1.discripcion funcional</b><br>
+                <p>
+                El módulo permite a los instructores gestionar las bitácoras de los aprendices que supervisan. Las bitácoras están organizadas por fichas de los cursos, lo que facilita la revisión. Una vez verificadas, las bitácoras se envían al administrador responsable
+                </p>
+                <hr>
+                <b>2.funcionalidades principales</b>
+                <b>organización de bitacoras</b>
+                <ol>
+                <ul><li>lista de aprendices agrupados por ficha de curso.</li></ul>
+                <ul><li>detalle del aprendiz</li></ul>
+                <ul><li>nombre completo </li></ul>
+                <ul><li>Numero de identificación</li></ul>
+                <ul><li>estado de la bitacora(pendiente de revision, verificada)</li></ul>
+                
+                 </ol>
+                    <b>revisión de bítacoras </b>
+                <ol>
+                    <ul><li>Visualización del contenido de la bitácora dentro del módulo.</li></ul>
+                    <ul><li>Posibilidad de añadir observaciones o notas relacionadas con la bitácora.</li></ul>
+                 </ol>
+                    <b>3.envio de admistrador</b>
+                 <ol>
+                    <ul><li>Botón para enviar una o varias bitácoras al administrador encargado.</li></ul>
+                    <ul><li>Confirmación del envío con registro de:</li></ul>
+                    <ul><li>Fecha y hora.</li></ul>
+                    <ul><li>administador receptor</li></ul>
+                
+                </ol>
+            <img src="assets/static/img/bitacoras.png" alt="" class="interfaz">
+            <img src="assets/static/img/bitacora2.png" alt="" class="interfaz">
+            </div>
+                
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                <tr>
+                    <th colspan="4">REQ-0011 Notificaciones </th>
+                </tr>
+                <tr>
+                    <th> Priorida: <br>Complejidad:</th>
+                    <td>Alta: x<br>Alta:</td>
+                    <td>Medio:  x<br>Medio:</td>
+                    <td>Bajo:  x<br>Bajo:</td>
+                </tr>  
+                    <th>Entradas</th>
+                    <td colspan="4"><ul><li>Botón para ingresar a las Notificaciones</li></ul></td>
+                </tr>
+                <tr>
+                    <th>Salidas</th>
+                    <td colspan="4"><ul><li>Historial de Notificaciones</li></ul></td>
+                </tr>
+                </tr>  
+                <th>Rol</th>
+                    <td colspan="4"><ul><li>Administrador</li><br><li>Aprendiz</li><br><li>Instructor</li></ul></td>
+                </tr>
+                </table></div>
+                <div>
+                <h1>Notificaciones</h1>
+                <p><b>Requerimiento: Notificaciones</b></p>
+                    <ol>
+                        <li><b> Descripcion Funcional:</b></li>
+                        <p>El usuario debe recibir notificaciones dentro del software.
+                            Las Cuales seran accesibles a traves de una campana ubicada
+                            en la parte superior de la interfaz. Este sistema de notificaciones le permite estar informado/a sobre tareas
+                            ,eventos o mensajes relevantes en tiempo real.</p>
+                        <li><b> Funcionalidades Principales:</b>
+                            <ol>
+                                <li><b>Vizualizaciones de Notificaciones:</b></li>
+                                    <ul><li>La campana mostrara un indicador numericon
+                                    la cantidad de notificacionesno leídas</li></ul>
+                                    <ul><li>Al hacer click en la campana, se despliega un menú
+                                    con las notificaciones recientes, ordenadas cronológicamente</li></ul>
+                                <li><b>Contenido de las notificaciones:</b></li>
+                                <ul><li>Las Notificaciones deben incluir:
+                                    <ul><li>Título o Resumen del Mensaje</li></ul>
+                                    <ul><li>Fecha y Hora de Recepción</li></ul>
+                                    <ul><li>Un enlace para Acceder si es un archivo</li></ul>
+                                </li></ul>
+                                <li><b>Gestión de Notificaciones:</b></li>
+                                <ul><li>El/la Instructor puede marcar una notificacion
+                                    como "Leída" para que desaparezca del contador de Pendientes</li></ul>
+                                    <ul><li>Historial Accesible Para consultar NotificacionesPasadas</li></ul>
+                                </ol></li>
+                        <li><b>Validaciones Necesarias:</b></li>
+                            <ul><li>Solo las Notificaciones Relevantes para el Rol del/a 
+                                Instructor deben Mostrase</li></ul>
+                            <ul><li>Las Notificaciones leídas deben  ser eliminadas del Indicador
+                                de pendientes, pero deben quedar registradas en el Historial</li></ul>
+                            </ol>
+            <img src="assets/static/img/notificaciones.png" alt="" class="interfaz">
+            </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                <tr>
+                    <th colspan="4">REQ-0012 Archivos </th>
+                </tr>
+                <tr>
+                    <th> Priorida: <br>Complejidad:</th>
+                    <td>Alta: x<br>Alta:</td>
+                    <td>Medio:  <br>Medio: x</td>
+                    <td>Bajo:  <br>Bajo:</td>
+                </tr>  
+                    <th>Entradas</th>
+                    <td colspan="4"><ul><li>Por Aprendiz(nombre o numero de Identificación)
+                    </li><br><li>Por Ficha de Formación</li><br><li>Por Rango de Fechas</li></ul></td>
+                    
+                </tr>
+                <tr>
+                    <th>Salidas</th>
+                    <td colspan="4"><ul><li>Bitacoras</li><br><li>Informes</li></ul></td>
+                    
+                </tr>
+                </tr>  
+                <th>Rol</th>
+                    <td colspan="4"><ul><li>Administrador</li></ul></td>
+                </tr>
+                </table></div>
+                <div>
+                <h1>Archivos</h1>
+                <p><b>Requerimiento:  Módulo Archivos</b></p>
+                <ol>
+                <li><b>Funcionalidades Principales:</b></li>
+                <ol><b><li>Vizualización de Bitacoras e Informes:</li></b></ol>
+                        <ul><li>Las Bitacoras y los informes deben mostrarse en secciones
+                        separadas dentro del Módulo</li></ul>
+                        <ul><li>Cada Seccion debe incluir una tabla con los
+                        los Archivos disponibles</li></ul>
+                <ol><li><b>Búsqueda Mediante Filtros:</b></li>
+                    <ul><li>Opciones de filtro para localizar bitacoras o Informes:</li></ul>
+                        <ol><ul><li>Por Aprendiz(Nombre o Número de Identificación).</li></ul>
+                        <ul><li>Por Ficha de Formación.</li></ul>
+                        <ul><li>Por Rangos de Fechas.</li></ul></ol>
+                    <ul><li>Los Resultados Beben Actualizarse dinamicamente al aplicar
+                        los Filtros.</li></ul>
+                <li><b>Visualización de Bitacoras En Tabla:</b></li>
+                    <ul><li>La Tabla de Bitacoras Incluye:</li></ul>
+                        <ol><ul><li><b>Nombre del Aprendiz.</b></li></ul>
+                        <ul><li><b>Ficha de Formación.</b></li></ul>
+                        <ul><li><b>Bitácoras: </b>Botón Para Visualizarla.</li></ul>
+                        <ul><li><b>Semaforo de estado:</b> Indicadodor visual que muestra
+                            el estado de la Revisión:</li></ul>
+                            <ol><ul><li><b>Rojo: </b>No revisada.</li></ul>
+                                <ul><li><b>Amarillo: </b>Pendiente De correcciones.</li></ul>
+                                <ul><li><b>Verde: </b>Lista Para Enviar.</li></ul>
+                            </ol></ol>
+                    <ul><li>Botón de Acción para cambiar el estado de bitácora según su revision.</li></ul>
+                <li><b>Envío De Bitácoras al Coordinador:</b></li>
+                    <ul><li>Una vez Revisadas, las bitácoras se peden seleccionar
+                            individualmente o en Grupo.</li></ul>
+                    <ul><li>Al presionar el Botón "Enviar", el sistema solicita Seleccionar al
+                            coordinador Destinatario.</li></ul>
+                    <ul><li>Confirmacion de envío exitosa con registro en el Historial</li></ul></ol>
+                <li><b>Validaciones Necesarias:</b></li>
+                    <ul><li>El semaforo solo  puede cambiar de estado si se revisa la Bitacora</li></ul>
+                    <ul><li>No se permite Enviar bitacoras con estado <b>Rojo</b> o <b>Amarillo</b></li></ul>
+                    <ul><li>La lista de Coordinadores disponibles debe cargarse dinámicamente
+                            al intentar enviar.</li></ul></ol>
+                            <img src="assets/static/img/bitacoras.png" alt="" class="interfaz">
+                            <img src="assets/static/img/bitacora2.png" alt="" class="interfaz">
+        </div>
+            <hr>
+            <div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                    <th colspan="4">REQ-0013 Módulos Bitácoras </th>
+                      </tr>
+                          <tr>
+                      <th> Priorida: <br>Complejidad:</th>
+                      <td>Alta: x<br>Alta:</td>
+                       <td>Medio:  <br>Medio: x</td>
+                        <td>Bajo:  <br>Bajo:</td>
+                    </tr>  
+                        <th>Entradas</th>
+                        <td colspan="4"><ul><li><b>Botón para Módulo Bitácoras</b></li></ul></td>
+                        </tr>
+                           <tr>
+                        <th>Salidas</th>
+                        <td colspan="4"><ul><li>Redirección al panel de cargar Bitácora</li></ul></td>
+                        </tr>
+                      </tr>  
+                   <th>Rol</th>
+                   <td colspan="4"><ul><li>Aprendiz</li></ul></td>
+            </tr>
+                    </table></div>
+                    <div>
+                    <h1>Bitácoras</h1>
+                    <p><b>Módulo Subir Bitácoras(Rol Aprendiz)</b></p>
+                    <p><b>Descripción:</b> El sofware Permite al Aprendiz subir sus Bitácoras de sus
+                   Actividades. Este Módulo Permitirá la carga de documneto en Formato PDF o Word</p>
+                  <p><b>Funcionalidad:</b></p>
+                        <p>-Cargar Archivo de Bitácora.</p>
+                        <p>-Visualizar y editar Entradas antes de Enviar.</p>
+                        <p>-Confirmacion de Envio Exitoso.</p>
+                      <ol><p><b>Pantalla Principal del Módulo:</b></p>
+                      <p>-Botón Cargar "Bitácora": Ubicado en la Parte superior izquierda de la
+                       pantalla, visible al entrar al Módulo.</p>
+                           <p><b>Modelo de Interacción:</b></p>
+                           <p>-Formulario de Carga: Aparece al hacer click en "Cargar Bitácora". Incluye Campos
+                               para seleccionar el archivo (Boton "seleccionar Archivo")</p>
+                          <p>-Botón "Enviar": Ubicado al final del formulario para confirmar la carga,
+                            seguido de un mensaje de confirmacion de envio exitoso.
+                                        </p></ol>
+                <img src="assets/static/img/bitacora-aprendiz.png" alt="" class="interfaz">
+                </div>
+                <hr>
+<div class="contenedor">
+                    <table class="funcionales">
+                         <tr>
+                        <th colspan="4">REQ-0014 Módulo Enviar Solicitudes </th>
+                         </tr>
+                         <tr>
+                    <th> Priorida: <br>Complejidad:</th>
+                    <td>Alta: x<br>Alta:</td>
+                     <td>Medio:  <br>Medio: x</td>
+                        <td>Bajo:  <br>Bajo:</td>
+                     </tr>  
+                         <th>Entradas</th>
+                     <td colspan="4"><ul><li><b>Botón para el Módulo</b></li></ul></td>
+                    </tr>
+                    <tr>
+                    <th>Salidas</th>
+                     <td colspan="4"><ul><li>Redirección al panel de cargar Redactar</li></ul></td>
+                    </tr>
+                    </tr>  
+                    <th>Rol</th>
+                         <td colspan="4"><ul><li>Aprendiz</li></ul></td>
+                        </tr>
+                     </table></div>
+            <div>
+                     <h1>Enviar Solicitudes en General</h1>
+                    <p>-Descripcción: El aprendiz debe poder enviar solicitudes asu instructor sobre
+                    cualquier  comentario relevante.</p>
+                    <b>Funcionalidad:</b>
+                        <ul><li>Redactar Mensajes.</li></ul>
+                        <ul><li>Seleccionar Destinatarios.</li></ul>
+                        <ul><li>Confirmación de Envío.</li></ul>
+                    <p><b>Pantalla principal del Módulo:</b></p>
+                    <ul>-Botón "Nueva Solicitud" Ubicado en la parte superior derecha.</ul>
+                    <ul>-<b>Modelon de Interacción:</b><ul><li><b>Ventana de Redacción:</b>
+                     Se habre al hacer click en "Nueva Solicitud". Contiene un Campo
+                    de texto para el mensaje, un desplegable para seleccionar Destinatarios
+                    y un botón "Enviar" al final.</li></ul></ul>
+                <img src="assets/static/img/solicitudes.png" alt="" class="interfaz">
+            </div>
+            <hr>
+
+<div class="contenedor">
+                <table class="funcionales">
+                    <tr>
+                        <th colspan="4">REQ-0015 Relleno de Formato </th>
+                    </tr>
+                    <tr>
+                        <th> Priorida: <br>Complejidad:</th>
+                        <td>Alta: x<br>Alta:</td>
+                        <td>Medio:  <br>Medio: x</td>
+                        <td>Bajo:  <br>Bajo:</td>
+                    </tr>  
+                        <th>Entradas</th>
+                        <td colspan="4"><ul><li><b>Botón para entar al formato</b></li></ul></td>
+                    </tr>
+                    <tr>
+                        <th>Salidas</th>
+                        <td colspan="4"><ul><li>Opciones para enviar el Formato</li></ul></td>
+                    </tr>
+                    </tr>  
+                    <th>Rol</th>
+                        <td colspan="4"><ul><li>Aprendiz</li></ul></td>
+                    </tr>
+                </table></div>
+        <div>
+         <h1>Rellenar Formatos.</h1>
+            <p>-Descripción: Permite al aprendiz completar y enviar formatos Necesarios
+            para la etapa productiva, tales como reporte de avance. <br><b>
+            -Funcionalidad:</b></p>
+             <ul>-Acceso a la plantilla de formatos. <br>-Enviar el formato.
+                <ul><b>-Pantalla Principal del Modulo: </b><br>-Lista de formatos disponibles
+                     :en la parte central con un botón "Completar" junto a cada formato.
+                     <br><b>-Modelo de Interacción: </b><ul><b>-Formulario de Formato:</b>
+                 Aparece al seleccionar "Completar". Incluye Campos editables según el
+            tipo de formato y un Botón "Guardar" al pie del formulario para Enviar.
+            </ul></ul></ul>
+        <img src="assets/static/img/formatos.png" alt="" class="interfaz">
+            </div>
+            <hr>
+<div class="contenedor">
+                <table class="funcionales">
+                <tr>
+                     <th colspan="4">REQ-0016 Horarios</th>
+                    </tr>
+                    <tr>
+                        <th> Priorida: <br>Complejidad:</th>
+                            <td>Alta: x<br>Alta:</td>
+                        <td>Medio:  <br>Medio: x</td>
+                        <td>Bajo:  <br>Bajo:</td>
+                    </tr>  
+                        <th>Entradas</th>
+                         <td colspan="4"><ul><li><b>Botón para entar a los Modulos</b></li></ul></td>
+                    </tr>
+                        <tr>
+                            <th>Salidas</th>
+                            <td colspan="4"><ul><li>Redirección al panel de Horarios</li></ul></td>
+                        </tr>
+                        </tr>  
+                             <th>Rol</th>
+                             <td colspan="4"><ul><li>Aprendiz</li></ul></td>
+                        </tr>
+                        </table></div>
+                <div>
+                        <h1>Horarios</h1>
+                            <p><b>Modulo Horarios rol (Aprendiz)</b></p>
+                            <p>-Descripcción: El aprendiz debe tener acceso a los horarios de Clases, Actividades
+                                y eventos Programados.</p>
+                            <p><b>Funcionalidad:</b><br>-Visualizar horarios semanales:</p>
+                            <ul><b>Pantalla Principal Del Módulo:</b></ul>
+                        <ul><b>-Vista del Calendario Semanal:</b> Ocupa la Mayor parte de la 
+                        Pantalla, mostrando el horario semanal.</ul>
+                <img src="assets/static/img/asistencia-aprendiz.png" alt="" class="interfaz">
+                </div>
+</div>
+</body>
+<footer>
+<hr>
+Regional Huila / Centro de Gestión y Desarrollo Sostenible Surcolombiano Carrera 8 N 7-53, Pitalito-Huila
+</footer>
+</html>

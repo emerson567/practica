@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadro</title>
+    <link rel="stylesheet" href="./assets/css.css" type="text/css">
+    <title>REQUERIMIENTOS TECNICOS</title>
+</head>
+<body class="body-margin">
+<header>
+<div>    
+<table class="table">
+    <tr>
+        <td rowspan="2" style="width: 20%;">
+            <img src="assets/static/img/logoSena.png" alt="Logo SENA" class="logo-img">
+        </td>
+        <td class="header" style="width: 60%;">
+            SERVICIO NACIONAL DE APRENDIZAJE SENA<br>
+            SISTEMA INTEGRADO DE GESTIÓN<br>
+            PROCEDIMIENTO GESTIÓN DE SISTEMAS DE INFORMACIÓN<br>
+            REQUERIMIENTOS FUNCIONALES
+        </td>
+        <td style="width: 20%;">
+            <div class="version-div">Versión</div>
+            <hr class="aaa">
+            <div class="version-div">Número de código</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">Nombre proyecto</td>
+    </tr>
+    <tr>
+        <td>Edición</td>
+        <td>Versión 1.1</td>
+        <td>Fecha: 2023</td>
+    </tr>
+</table>
+</div>
+</header>
+<div class="a1"></div>
+
+<div style="display: flex; align-items: center;">
+
+</div>
+<h2 style="margin-top: 10px;">3.2 Requisitos Técnicos</h2>
+<hr>
+<table>
+    <tr>
+        <th><b>FUNCIONALIDAD</b></th>
+   
+        <th><b>TIPO (esencial, ideal, opcional) </b></th>
+    </tr>
+    <tr>
+        <td>TIPO (esencial, ideal, opcional) </td>
+        <td>esencial </td>
+    </tr>
+    <tr>
+        <td>RT01 - Backend</td>
+        <td> esencial</td>
+    </tr>
+    <tr>
+        <td>RT0n - Base de Datos (BD)</td>
+        <td>esencial  </td>
+    </tr>
+</table>
+<h2>3.2.1 Clasificación de requisitos Técnicos.</h2>
+<hr>
+
+<table>
+
+    <tr>
+        <th>ID del requerimiento</th>
+        <td>RT01</td>
+    </tr>
+    <tr></tr>
+        <th>Nombre del requerimiento</th>
+        <td>Interfaz de Usuario para Gestión de Usuarios</td>
+    </tr>
+    <tr>
+        <th>Descripción</th>
+        <td>
+     <ul>
+    
+        <li>- Descripción: Desarrollar una interfaz de usuario intuitiva que permita a los administradores gestionar usuarios dentro del sistema.</li>
+        <li>- Detalles:</li>
+        <li>- Componentes:</li>
+        <li>- Formulario de registro para crear y editar usuarios</li>
+        <li>- Tabla para listar los usuarios existentes con opciones para editar o eliminar.</li>
+        <li>- Diseño:</li>
+        <li>- Utilizar HTML para la estructura y CSS para el estilo</li>
+        <li>- Asegurar que la interfaz sea responsiva y accesible.</li>
+        <li>- Interacción:</li>
+        <li>- Las acciones del usuario en la interfaz deben desencadenar solicitudes HTTP al backend</li>
+        <li>- Mostrar notificaciones de éxito o error según el resultado de las operaciones.</li>
+     </ul>
+        </td>
+    </tr>
+    <tr>
+        <th>prioridad</th>
+        <td>alta</td>
+    </tr>
+</table>
+
+<table>
+<tr>
+    <th>ID del requerimiento</th>
+    <td>RT02</td>
+</tr>
+<tr>
+    <th>Nombre del requerimiento</th>
+    <td>API de Gestión de Usuarios</td>
+</tr>
+<tr>
+    <th>Descripción</th>
+    <td>
+ <ul>
+
+    <li>- Descripción: El backend debe proporcionar una API RESTful para gestionar las operaciones CRUD de usuarios.</li>
+    <li>- Detalles:</li>
+    <li>- Endpoints:</li>
+    <li>- POST /api/usuarios: Crear un nuevo usuario.</li>
+    <li>- GET /api/usuarios/{id}: Obtener detalles de un usuario específico.</li>
+    <li>- PUT /api/usuarios/{id}: Actualizar información de un usuario.</li>
+    <li>- DELETE /api/usuarios/{id}: Eliminar un usuario.</li>
+    <li>- Validaciones:</li>
+    <li>- Verificar que los datos sean completos y válidos antes de la creación o actualización.</li>
+    <li>- Asegurar que las operaciones sean realizadas por usuarios con permisos adecuados (e.g., administradores).</li>
+    <li>- Seguridad: Implementar autenticación y autorización para proteger los endpoints.</li>
+ </ul>
+    </td>
+</tr>
+<tr>
+    <th>prioridad</th>
+    <td>alta</td>
+</tr>
+</table>
+
+<table>
+<tr>
+    <th>ID del requerimiento</th>
+    <td>RT0n</td>
+</tr>
+<tr>
+    <th>Nombre del requerimiento</th>
+    <td>Gestión de Usuarios</td>
+</tr>
+<tr>
+    <th>Descripción</th>
+    <td>
+ <ul>
+
+    <li>- Descripción*: La base de datos debe almacenar la información de todos los usuarios del sistema, incluyendo su rol, datos personales y credenciales de acceso.</li>
+    <li>- Detalles:</li>
+    <li>- Tablas involucradas: Usuarios, Roles.</li>
+    <li>- Atributos esenciales:</li>
+    <li>- Usuarios: ID, nombre completo, correo electrónico, número de identificación, teléfono, rol, contraseña.</li>
+    <li>- Roles: ID, nombre del rol (Aprendiz, Instructor, Administrador).</li>
+    <li>- Relaciones: </li>
+    <li>- Cada usuario debe estar asociado a un rol específico.</li>
+    <li>- Integridad: Asegurar que cada usuario tenga un rol asignado y que los datos de identificación sean únicos.</li>
+ </ul>
+    </td>
+</tr>
+<tr>
+    <th>prioridad</th>
+    <td>alta</td>
+</tr>
+</table>
+
+<footer>
+    <hr id="hr">
+    Grupo Gestión de los sistemas de Información
+    Oficina de Sistemas – Dirección General 
+</footer>
+
+</body>
+</html>

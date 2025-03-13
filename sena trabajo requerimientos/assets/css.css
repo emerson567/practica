@@ -1,0 +1,149 @@
+div{
+    margin: 0px 50px 50px 50px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-content: space-between;
+}
+body {
+    margin: 0px 100px 100px 100px;
+}
+.table{
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.table, .table th, .table td {
+    border:2px solid rgb(0, 0, 0);
+}
+.table th, .table td {
+    padding: 5px;
+    text-align: center;
+}
+.header {
+    text-align: center;
+}
+img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #1ca806;
+}
+.ty {
+    text-align: center;
+}
+.qwe {
+    text-align: center;
+}
+hr {
+    color: #828f87d4;
+    border: 5px solid;
+}
+.aa ul {
+    list-style-type: none;
+    padding: 0; 
+    text-align: center;
+    margin: 50px;
+}
+.aaa {
+    border-collapse: collapse;
+    border: 1px solid rgb(150, 159, 149);
+    
+}
+#hr {
+    color: #0fa10ad4;
+    border: 5px solid;
+}
+.pr {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24pt;
+}
+.pro {
+    text-align: center;
+    margin: 100px;
+}
+.au{
+    display: inline;
+}
+.qw {
+    display: inline;
+}
+
+
+.logo-img {
+    width: 100px;
+}
+.version-div {
+    text-align: center;
+}
+body{
+    margin: 0px 100px 100px 100px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 12px;
+    }
+.table, .table th, .table td {
+    border: 1px solid black;
+    }
+.table th, .table td {
+    padding: 5px;
+    text-align: center;
+}
+.header {
+text-align: center;
+}
+.inicio {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+h1 {
+    display: block;
+    text-align: center;
+}
+img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+    }
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.funcionales{
+    width: 60%;
+    border-collapse: collapse;
+}
+.funcionales th, .funcionales td{
+    border: 1px solid black;
+    padding: 2px;
+}
+.interfaz{
+    width: 700px;
+}
+footer{
+    text-align: center;
+}

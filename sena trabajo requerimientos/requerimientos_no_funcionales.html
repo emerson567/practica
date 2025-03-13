@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimientos No Funcionales</title>
+    <link rel="stylesheet" href="./assets/css.css" type="text/css">
+    
+</head>
+<body>
+<header>
+<table class="table">
+    <tr>
+        <td rowspan="2" style="width: 20%;">
+            <img src="assets/static/img/logoSena.png" alt="logo Sena">
+        </td>
+        <td class="header" style="width: 60%;">
+            SERVICIO NACIONAL DE APRENDIZAJE SENA<br>
+            SISTEMA INTEGRADO DE GESTIÓN<br>
+            PROCEDIMIENTO GESTIÓN DE SISTEMAS DE INFORMACIÓN<br>
+            REQUERIMIENTOS FUNCIONALES
+        </td>
+        <td style="width: 20%;">
+            <div>Versión</div>
+            <hr class="aaa">
+            <div>Número de código</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">Nombre proyecto</td>
+    </tr>
+    <tr>
+        <td>Edición</td>
+        <td>Versión 1.1</td>
+        <td>Fecha: 2023</td>
+    </tr>
+</table>
+</header>
+<div>
+    <h1><b>3.3 Requerimientos no funcionales</b></h2>
+        <h2><b>Requerimiento No Funcional: Creación de Usuarios según Rol</b></h3>
+            <p>El sistema debe permitir la creación de usuarios de manera rápida,
+            segura y eficiente, cumpliendo con estándares de calidad.</p>
+            <ol><li><b>Rendimiento:</b></li>
+                    <ul><li>La creación de un usuario debe completarse en menos de 3 segundos.</li></ul>
+                    <ul><li>El sistema debe permitir la creación simultánea de hasta 10
+                        usuarios sin disminuir su rendimiento.</li></ul>
+                <li><b>Seguridad:</b>
+                    <ul><li>Los datos ingresados deben validarse automáticamente para
+                    evitar duplicados o errores.</li></ul>
+                    <ul><li>Las contraseñas deben almacenarse de forma segura mediante cifrado avanzado.</li></ul>
+                    <ul><li>Si el número de identificación ya existe, el sistema debe notificar al administrador.</li></ul>
+                <li><b>Usabilidad:</b></li>
+                    <ul><li>La interfaz debe ser fácil de entender y usar, mostrando campos específicos según el rol del usuario.</li></ul>
+                    <ul><li>Deben incluirse mensajes de ayuda o corrección en caso de error.</li></ul>
+                <li><b>Compatibilidad:</b></li>
+                    <ul><li>El sistema debe funcionar en dispositivos como computadoras y móviles.</li></ul>
+                    <ul><li>Debe ser compatible con los navegadores más usados.</li></ul>
+                <li><b>Trazabilidad:</b></li>
+                    <ul><li>Cada creación de usuario debe registrarse con fecha, hora y el administrador que realizó la acción.</li></ul>
+                <li><b>Escalabilidad:</b></li>
+                    <ul><li>El diseño debe permitir agregar nuevos roles sin afectar el funcionamiento del sistema.</li></ul>
+                </li></ol>
+        <hr>
+        </div>
+        
+        <div>
+        <h2><b>2. Requerimiento No Funcional: Buscar Usuarios (Administrador)</b></h3>
+            <p>El submódulo "Usuario" debe ofrecer un rendimiento y una experiencia óptima para la búsqueda, gestión y actualización de
+            usuarios dentro del sistema, garantizando seguridad y facilidad de uso. <br>
+            Este requerimiento no funcional asegura que las funcionalidades sean rápidas, confiables y compatibles con diferentes dispositivos.</p>
+            <h3><b>1.Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>Las búsquedas deben arrojar resultados en menos de 2 segundos, incluso con una base de 
+                    datos de gran tamaño.</li></ul>
+                <ul><li><b>Eficiencia en filtros: </b>La aplicación de filtros como rol, número de identificación o nombre debe ejecutarse 
+                    sin afectaciones al tiempo de carga.</li></ul>
+        <hr>
+            <h3><b>2.Seguridad:</b></h3>
+                <ul><li><b>Control de acceso: </b>Solo los administradores deben tener permisos para realizar cambios en el estado de los 
+                    usuarios y modificar información.</li></ul>
+                <ul><li><b>Validación: </b>Todas las acciones deben ser validadas para evitar cambios no autorizados, especialmente en la 
+                    transición de etapas de los aprendices.</li></ul>
+                <ul><li><b>Protección de datos: </b>La información personal de los usuarios debe estar protegida mediante encriptación y
+                    cumplir con normativas de privacidad.</li></ul>
+        <hr>
+            <h3><b>3.Usabilidad:</b></h3>
+                <ul><li><b>Interfaz clara: </b>La interfaz del submódulo debe ser intuitiva, con una estructura que permita localizar y
+                    gestionar usuarios de manera rápida.</li></ul>
+                <ul><li><b>Filtros dinámicos: </b>Los filtros deben ser interactivos y permitir búsquedas parciales o completas, 
+                    adaptándose a las necesidades del administrador.</li></ul>
+                <ul><li><b>Mensajes de confirmación: </b>Antes de realizar cambios críticos, como el estado de un aprendiz, el sistema 
+                    debe mostrar mensajes de confirmación claros.</li></ul>
+        <hr>
+            <h3><b>4.Compatibilidad:</b></h3>
+                <ul><li><b>Dispositivos: </b>El submódulo debe ser accesible desde computadoras, tabletas y dispositivos móviles.</li></ul>
+                <ul><li><b>Navegadores: </b>Compatible con los navegadores más comunes (Chrome, Firefox, Edge).</li></ul>
+        <hr>
+            <h3><b>5.Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividades: </b>Todas las acciones realizadas en el submódulo (búsquedas, modificaciones, transiciones de
+                etapa) deben ser registradas con detalles como:
+                    <ul><li>Fecha y hora.</li></ul>
+                    <ul><li>Usuario administrador que realizó la acción.</li></ul>
+                    <ul><li>Cambios efectuados.</li></ul>
+                </li></ul>
+            <h3><b>6.Escalabilidad:</b></h3>
+                <ul><li>El submódulo debe estar diseñado para manejar un crecimiento en la cantidad de usuarios y roles, manteniendo el
+                    rendimiento y las funcionalidades actuales.</li></ul>
+        <hr>
+    </div>
+
+    <div>
+        <h2><b>3. Requerimiento No Funcional: Asignar Instructor (Administrador)</b></h3>
+                <p>El módulo de asignación de instructores debe cumplir con estándares de rendimiento, seguridad y usabilidad, asegurando 
+                    que las asignaciones se realicen de manera eficiente y sin errores.</p>
+        
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>La asignación de un instructor a un aprendiz no debe exceder los 2 segundos desde la
+                    selección hasta la confirmación.</li></ul>
+                <ul><li><b>Procesamiento: </b>El sistema debe permitir la asignación simultánea de hasta 5 aprendices a instructores
+                    diferentes sin degradar el rendimiento.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Validación previa: </b>Antes de realizar la asignación, el sistema debe:
+                    <ul><li>Verificar si el aprendiz ya tiene un instructor asignado.</li></ul>
+                    <ul><li>Comprobar la disponibilidad del instructor seleccionado.</li></ul></li></ul>
+                <ul><li><b>Prevención de duplicados: </b>El sistema no debe permitir que un aprendiz sea asignado a más de un 
+                    instructor.</li></ul>
+                <ul><li><b>Control de acceso: </b>Solo los administradores con permisos autorizados pueden realizar 
+                    asignaciones.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz intuitiva: </b>La lista de aprendices e instructores debe ser clara y fácil de navegar,
+                    con información bien organizada.</li></ul>
+                <ul><li><b>Filtros dinámicos: </b>Los filtros para buscar aprendices o instructores deben responder en tiempo 
+                    real y permitir búsquedas específicas.</li></ul>
+                <ul><li><b>Notificaciones: </b>El sistema debe mostrar mensajes claros de confirmación o error después de 
+                    cada asignación.</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Dispositivos</b>El módulo debe funcionar en computadoras, tabletas y dispositivos móviles.</li></ul>
+                <ul><li><b>Navegadores: </b>: Garantizar compatibilidad con navegadores como Chrome, Firefox y Edge.</li></ul>
+        <hr>
+            <h3><b>5. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividades: </b>Cada asignación debe ser registrada automáticamente con:</li>
+                    <ul><li>Nombre del aprendiz.</li></ul>
+                    <ul><li>Nombre del instructor.</li></ul>
+                    <ul><li>Fecha y hora de la asignación.</li></ul>
+                    <ul><li>Usuario administrador que realizó la operación.</li></ul></ul>
+        <hr>
+            <h3><b>6. Escalabilidad:</b></h3>
+                <ul><li>El diseño del módulo debe permitir agregar nuevos aprendices e instructores sin comprometer el 
+                    rendimiento o las funcionalidades actuales.</li></ul>
+        <hr>
+</div>
+
+<div>
+        
+        <h2><b>4. Requerimiento No Funcional: Módulo de Horarios (Instructor)</b></h3>
+                <p>El módulo de horarios debe garantizar un rendimiento óptimo y una experiencia de usuario intuitiva, 
+                    asegurando que los instructores puedan gestionar su programación semanal de manera eficiente.</p>
+            <h3>1. Rendimiento:</h3>
+                <ul><li><b>Tiempo de carga: </b>La tabla de horarios semanales debe cargarse en un máximo de 2
+                    segundos al ingresar al módulo.</li></ul>
+                <ul><li><b>Actualización en tiempo real: </b>Los cambios realizados en la programación deben
+                    reflejarse inmediatamente en el módulo sin necesidad de recargar la página.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Control de acceso:</b>Solo los instructores autorizados deben tener acceso a este módulo, 
+                    verificando su identidad mediante credenciales.</li></ul>
+                <ul><li><b>Protección de datos: </b> La información del horario (cursos, aulas, bloques horarios) 
+                    debe almacenarse de manera segura para evitar accesos no autorizados o modificaciones indebidas.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz organizada: </b>La tabla debe ser clara y accesible, con columnas bien definidas que incluyan:</li>
+                    <ul><li>Día de la semana.</li></ul>
+                    <ul><li>Curso asignado.</li></ul>
+                    <ul><li>Horario.</li></ul>
+                    <ul><li>Ubicación o aula (si aplica).</li></ul></ul>
+                <ul><li><b>Interacción directa: </b>Permitir seleccionar un día específico para realizar acciones como tomar asistencia.</li></ul>
+                <ul><li><b>Compatibilidad visual: </b>Asegurar que la tabla sea legible en dispositivos de diferentes tamaños.</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Multiplataforma: </b>El módulo debe ser accesible desde computadoras, tabletas y dispositivos móviles.</li></ul>
+                <ul><li><b>Navegadores soportados: </b>Chrome, Firefox, Edge y Safari.</li></ul>
+        <hr>
+            <h3><b>5. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de consultas: </b> Registrar cada vez que un instructor accede al módulo, incluyendo:</li>
+                    <ul><li>Fecha y hora.</li></ul>
+                    <ul><li>Identificación del instructor.</li></ul>
+                    <ul><li>Curso o día consultado (si aplica).</li></ul></ul>
+        <hr>
+            <h3><b>6. Escalabilidad:</b></h3>
+                <ul><li><b>Gestión dinámica: </b>El módulo debe adaptarse fácilmente a cambios en los horarios o asignación de 
+                    nuevos cursos, manteniendo el mismo nivel de rendimiento</li></ul>
+        <hr>
+        </div>
+
+        <div>
+        <h2><b>5. Requerimiento No Funcional: Módulo de Asistencia (Instructor)</b></h3>
+                <p>El módulo de asistencia debe ser ágil y sencillo para permitir a los instructores gestionar la presencia de los aprendices en tiempo 
+                    real. Además, debe estar correctamente integrado con el sistema para garantizar una experiencia fluida y confiable.</p>
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de carga: </b>La lista de aprendices debe aparecer en menos de 3 segundos después de seleccionar el día de la 
+                    semana en la tabla de horarios.</li></ul>
+                <ul><li><b>Actualización en tiempo real: </b>Cualquier cambio realizado en el estado de asistencia (Presente, Ausente, Pendiente) debe
+                    reflejarse al instante para garantizar la precisión de la información.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Acceso autorizado: </b>Solo los instructores que estén autorizados y logueados correctamente deben tener
+                    acceso a tomar la asistencia.</li></ul>
+                <ul><li><b>Protección de datos sensibles: </b>Los números de identificación y nombres de los aprendices deben ser tratados de acuerdo
+                    con las políticas de privacidad del sistema, con acceso restringido a personas no autorizadas.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interacción sencilla: </b>Al presionar un día, debe desplegarse una lista fácil de leer con los aprendices 
+                    inscritos, mostrando:</li>
+                    <ul><li>Nombre completo.</li></ul>
+                    <ul><li>Número de identificación.</li></ul>
+                    <ul><li>Estado actual de asistencia.</li></ul></ul>
+                <ul><li><b>Estado de asistencia: </b>El instructor debe poder actualizar el estado de los aprendices de manera rápida, marcando su e
+                    stado como "Presente", "Ausente" o "Pendiente".</li></ul>
+                <ul><li><b>Indicadores claros: </b>Usar colores o iconos para resaltar el estado de la asistencia de cada aprendiz 
+                    (verde para "Presente", rojo para "Ausente").</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Multiplataforma: </b>El módulo debe ser accesible desde cualquier dispositivo (computadoras, tabletas y teléfonos móviles).</li></ul>
+                <ul><li><b>Navegadores soportados: </b> Chrome, Firefox, Safari y Edge.</li></ul>
+        <hr>
+            <h3><b>5. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de acciones: </b>El sistema debe registrar las acciones de los instructores, incluyendo:</li>
+                    <ul><li>Fecha y hora de cada modificación de la asistencia.</li></ul>
+                    <ul><li>Identificación del instructor que tomó la asistencia.</li></ul>
+                    <ul><li>Estado de la asistencia actualizado.</li></ul></ul>
+        <hr>
+            <h3><b>6. Escalabilidad:</b></h3>
+                <ul><li><b>Soporte para más cursos</b>El sistema debe poder gestionar la asistencia de más cursos o aprendices sin comprometer el 
+                    rendimiento del módulo.</li></ul>
+                <ul><li><b>Integración dinámica: </b>El sistema debe estar preparado para cambios en la programación de horarios y asistencia 
+                    sin interrupciones.</li></ul>
+        <hr>
+            <h3><b>7. Validaciones necesarias:</b></h3>
+                <ul><li><b>Mostrar solo los cursos asignados:</b> El sistema debe asegurar que el instructor vea únicamente los cursos que tiene asignados 
+                    para el día seleccionado.</li></ul>
+                <ul><li><b>Restricción de fechas: </b>No se debe permitir tomar asistencia si el día seleccionado no corresponde al actual.</li></ul>
+                <ul><li><b>Sincronización con la programación: </b>Los horarios deben estar correctamente sincronizados con la programación general del sistema, 
+                    y cualquier cambio en la programación debe reflejarse automáticamente en el módulo de asistencia.</li></ul>
+        <hr>
+                </div>
+
+        <div>
+        
+        <h2><b>6. Requerimiento No Funcional: Módulo de Reportes (Aprendiz, Instructor, Administrador)</b></h3>
+                <p><b>Descripción general: </b>El módulo de reportes debe asegurar que la generación, visualización y descarga de reportes sobre asistencias se 
+                    realice de manera eficiente, segura y accesible, cumpliendo con las necesidades del usuario según su rol y garantizando un rendimiento 
+                    adecuado en el sistema.</p>
+                <h3><b>1. Rendimiento:</b></h3>
+                    <ul><li><b>Tiempo de respuesta: </b>La generación de un reporte no debe exceder los 5 segundos desde la solicitud hasta la presentación 
+                        del archivo descargable, independientemente del volumen de datos.</li></ul>
+                    <ul><li><b>Concurrencia: </b>El sistema debe permitir la generación de reportes de hasta 50 usuarios simultáneamente sin afectar la 
+                        respuesta del sistema ni su estabilidad.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Autenticación y autorización: </b>El acceso a los reportes debe estar restringido según el rol del usuario (aprendiz, instructor, 
+                    administrador). Un aprendiz solo podrá descargar su propio reporte, un instructor los de sus aprendices y un administrador todos 
+                    los reportes.</li></ul>
+                <ul><li><b>Protección de datos: </b>Los datos de asistencia deben ser cifrados tanto en tránsito como en almacenamiento, protegiendo la 
+                    privacidad de la información de los usuarios.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz amigable: </b>La interfaz para la búsqueda y descarga de reportes debe ser sencilla y clara. Los filtros deben ser 
+                    fácilmente accesibles y comprensibles para los usuarios sin necesidad de asistencia técnica.</li></ul>
+                <ul><li><b>Compatibilidad: </b>El módulo debe ser accesible desde los principales navegadores web (Chrome, Firefox, Edge) y en 
+                    dispositivos móviles y de escritorio.</li></ul>
+        <hr>
+            <h3><b>4. Escalabilidad:</b></h3>
+                <ul><li>El sistema debe poder manejar un crecimiento en la cantidad de usuarios y registros de asistencia sin que esto afecte el 
+                    rendimiento de la generación y descarga de reportes. Esto implica que el sistema sea capaz de manejar grandes volúmenes de datos 
+                    sin que el tiempo de respuesta se vea significativamente afectado.</li></ul>
+        <hr>
+            <h3><b>5. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividades: </b> Cada vez que se genera un reporte, el sistema debe registrar la fecha y hora de la solicitud, 
+                    el usuario que realizó la operación, los filtros aplicados y el tipo de reporte descargado (formato PDF o Excel).</li></ul>
+                <ul><li><b>Monitoreo de accesos: </b>Debe existir un registro de los accesos y descargas de reportes para auditar el uso y garantizar 
+                    que no haya acceso no autorizado a los datos.</li></ul>
+        <hr>
+            <h3><b>6. Compatibilidad:</b></h3>
+                <ul><li>•	El módulo debe ser compatible con dispositivos móviles y ordenadores, permitiendo que los usuarios puedan acceder a 
+                    los reportes desde cualquier plataforma con acceso a Internet.</li></ul>
+        <hr>
+        </div>
+
+        <div>
+        <h2><b>7. Requerimiento No Funcional: Módulo de Etapa Práctica (Instructor)</b></h3>
+            <p><b>Descripción general: </b>El módulo de Etapa Práctica debe garantizar que los instructores puedan gestionar las bitácoras de los 
+                aprendices de manera eficiente, segura y confiable. Esto incluye la organización, revisión y envío de las bitácoras al administrador. 
+                El sistema debe ofrecer un rendimiento óptimo, garantizar la integridad de los datos y facilitar una interfaz amigable 
+                para el usuario.</p>
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>La carga de la lista de bitácoras y la visualización de los detalles no deben exceder los 
+                    3 segundos, incluso si el número de bitácoras es elevado.</li></ul>
+                <ul><li><b>Concurrencia: </b>El sistema debe ser capaz de manejar la visualización y envío de bitácoras de hasta 100 
+                    aprendices simultáneamente sin deteriorar el rendimiento general del sistema.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>cceso restringido: </b>Solo los instructores responsables de los aprendices podrán acceder a las bitácoras correspondientes 
+                    a su grupo, asegurando la privacidad de la información.</li></ul>
+                <ul><li><b>Protección de datos: </b>Solo los instructores responsables de los aprendices podrán acceder a las bitácoras correspondientes 
+                    a su grupo, asegurando la privacidad de la información.</li></ul>
+                <ul><li><b>Autenticación: </b>El sistema debe requerir que el instructor se autentique antes de acceder al módulo de bitácoras, 
+                    asegurando que solo los usuarios autorizados puedan realizar modificaciones.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz amigable: </b>a interfaz debe ser clara y fácil de usar, con opciones intuitivas para visualizar, revisar y 
+                    enviar las bitácoras. Las acciones deben ser rápidas y accesibles.</li></ul>
+                <ul><li><b>Accesibilidad: </b>La vista de las bitácoras debe ser adaptativa, permitiendo a los instructores revisar las bitácoras 
+                    desde dispositivos móviles y de escritorio. La navegación debe ser sencilla, con una estructura clara de fichas de cursos 
+                    y aprendices.</li></ul>
+        <hr>
+            <h3><b>4. Escalabilidad:</b></h3>
+                <ul><li>El sistema debe estar diseñado para permitir la inclusión de un número creciente de aprendices y bitácoras sin 
+                    que el rendimiento se vea afectado. Esto incluye la capacidad de agregar nuevos cursos y gestionar las bitácoras de 
+                    manera eficiente sin aumentar significativamente el tiempo de carga o procesamiento.</li></ul>
+        <hr>
+            <h3><b>5. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividades: </b>Cada acción realizada en el módulo (revisión, envío de bitácoras) debe ser 
+                    registrada con detalles como:</li>
+                        <ul><li>Fecha y hora de la acción.</li></ul>
+                        <ul><li>Usuario que realizó la acción.</li></ul>
+                        <ul><li>aprendices y bitácora involucrada.</li></ul>
+                        <ul><li>Estado final de la bitácora (verificada o pendiente).</li></ul></ul>
+        <hr>
+            <h3><b>6. Compatibilidad:</b></h3>
+                <ul><li>•	El módulo debe ser compatible con los principales navegadores web (Chrome, Firefox, Edge) y debe permitir 
+                    el acceso tanto desde dispositivos móviles como desde computadoras de escritorio. El diseño debe ser responsivo, 
+                    adaptándose bien a diferentes tamaños de pantalla.</li></ul>
+        <hr>
+                </div>
+    
+<div>
+        
+        <h2><b>8. Requerimiento No Funcional: Subir Bitácora (Aprendiz)</b></h3>
+            <p><b>Descripción general: </b>El módulo de subir bitácoras debe ofrecer una experiencia eficiente y segura para los 
+                aprendices al cargar documentos relacionados con sus actividades. Este proceso debe ser fluido, sin demoras, y 
+                proteger la integridad de los archivos subidos. Además, el sistema debe garantizar que los aprendices puedan 
+                editar sus entradas antes del envío y recibir una confirmación clara tras completar la acción.</p>
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>La carga del formulario y la visualización del archivo seleccionado no deben 
+                    tardar más de 2 segundos. El proceso de carga del archivo no debe exceder los 5 segundos, incluso con 
+                    archivos grandes (hasta 10MB).</li></ul>
+                <ul><li><b>Concurrencia: </b>El sistema debe ser capaz de permitir la carga simultánea de hasta 50 bitácoras 
+                    sin afectar el rendimiento general.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Protección de archivos: </b>Los archivos subidos deben ser escaneados por el sistema para detectar 
+                    posibles virus o malware antes de ser almacenados en el servidor.</li></ul>
+                <ul><li><b>Cifrado de datos: </b>Toda la información transmitida entre el usuario y el servidor (incluidos los archivos) 
+                    debe ser cifrada utilizando HTTPS para proteger la privacidad de los datos.</li></ul>
+                <ul><li><b>Autenticación: </b>El aprendiz debe estar autenticado antes de poder cargar una bitácora, garantizando 
+                    que solo los usuarios autorizados puedan realizar la acción.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz intuitiva: </b> El proceso de carga debe ser sencillo y directo. El formulario debe estar claro y 
+                    ofrecer instrucciones precisas, como el tamaño máximo permitido para el archivo.</li></ul>
+                <ul><li><b>Confirmación clara: </b>Al completar la carga, debe mostrarse un mensaje de confirmación visual 
+                    indicando que el archivo ha sido subido exitosamente.</li></ul>
+                <ul><li><b>Edición previa al envío: </b>El aprendiz debe poder revisar y editar las entradas del archivo antes de 
+                    enviarlo. Esto puede incluir la visualización del contenido o un campo para agregar 
+                    comentarios adicionales.</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Dispositivos y navegadores: </b>El módulo debe ser accesible desde los principales navegadores web 
+                    (Chrome, Firefox, Edge) y funcionar adecuadamente en dispositivos móviles y de escritorio. La interfaz 
+                    debe ser responsiva para adaptarse a diferentes tamaños de pantalla.</li></ul>
+                <ul><li><b>Formatos soportados:</b>El sistema debe aceptar archivos en formatos PDF y Word, y debe ser capaz 
+                    de previsualizar el archivo seleccionado antes de ser enviado.</li></ul>
+        <hr>
+            <h3><b>5. Escalabilidad:</b></h3>
+                <ul><li>El sistema debe ser capaz de manejar un crecimiento en la cantidad de bitácoras sin afectar su 
+                    rendimiento. Debe ser fácil integrar nuevas funcionalidades (como más formatos de archivo o nuevos filtros) 
+                    sin modificar significativamente el proceso de carga de bitácoras.</li></ul>
+        <hr>
+            <h3><b>6. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividad: </b>El sistema debe registrar el nombre del aprendiz, la fecha y hora de la 
+                    carga de la bitácora, así como el estado del archivo (subido, pendiente de revisión, enviado). Esta 
+                    información debe ser accesible solo para usuarios autorizados, como los administradores o 
+                    instructores.</li></ul>
+        <hr>
+            <h3><b>7. Compatibilidad con otros módulos:</b></h3>
+                <ul><li><b>Integración con el sistema de revisión: </b> Una vez que la bitácora ha sido enviada, debe 
+                    integrarse con el módulo correspondiente de revisión de bitácoras por parte del instructor. Esto 
+                    garantiza que las bitácoras sean procesadas de forma eficiente una vez subidas.</li></ul>
+        <hr>
+</div>
+
+<div>
+        <h2><b>9. Requerimiento No Funcional: Enviar Solicitudes en General (Aprendiz)</b></h3>
+            <p><b>Descripción general:</b>El módulo para enviar solicitudes permite a los aprendices redactar mensajes dirigidos 
+                a sus instructores u otros destinatarios. El proceso debe ser eficiente, seguro y fácil de usar, garantizando 
+                que las solicitudes se envíen correctamente y sean recibidas por los destinatarios correspondientes. Además, se 
+                debe proporcionar una confirmación clara y rápida de la acción realizada.</p>
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>La ventana de redacción debe abrirse en un tiempo máximo de 2 segundos después 
+                    de hacer clic en "Nueva solicitud". El envío de la solicitud debe completarse en menos de 3 segundos desde 
+                    el clic en el botón "Enviar".</li></ul>
+                <ul><li><b>Concurrencia: </b>El sistema debe permitir el envío simultáneo de hasta 100 solicitudes sin experimentar 
+                    disminuciones notables en la velocidad o el rendimiento general.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Protección de datos: </b>Las solicitudes deben ser enviadas de forma segura mediante cifrado HTTPS, 
+                    asegurando que los mensajes no puedan ser interceptados durante la transmisión.</li></ul>
+                <ul><li><b>Autenticación de usuarios: </b>El aprendiz debe estar autenticado para acceder al módulo de solicitudes, 
+                    lo que garantiza que solo los usuarios autorizados puedan enviar mensajes.</li></ul>
+                <ul><li><b>Control de acceso: </b>Solo los destinatarios seleccionados deben poder ver las solicitudes enviadas. 
+                    El sistema debe asegurar que los datos de contacto de otros usuarios no sean accesibles de 
+                    manera inapropiada.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz clara y accesible: </b>La interfaz debe ser sencilla e intuitiva. Los botones, campos de texto 
+                    y opciones deben estar bien etiquetados, con instrucciones claras para redactar y enviar solicitudes.</li></ul>
+                <ul><li><b>Confirmación visual: </b>La interfaz debe ser sencilla e intuitiva. Los botones, campos de texto y opciones 
+                    deben estar bien etiquetados, con instrucciones claras para redactar y enviar solicitudes.</li></ul>
+                <ul><li><b>Campos obligatorios: </b>La interfaz debe ser sencilla e intuitiva. Los botones, campos de texto y opciones 
+                    deben estar bien etiquetados, con instrucciones claras para redactar y enviar solicitudes.</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Dispositivos y navegadores: </b>El módulo debe ser accesible y funcional en los principales navegadores web 
+                    (Chrome, Firefox, Edge) y dispositivos móviles. La interfaz debe adaptarse correctamente a pantallas de diferentes
+                    tamaños (responsividad).</li></ul>
+                <ul><li><b>Formato de mensaje: </b>El campo de texto debe ser capaz de soportar caracteres especiales, saltos de línea 
+                    y otros elementos básicos de formato, asegurando que el mensaje se envíe correctamente.</li></ul>
+        <hr>
+            <h3><b>5. Escalabilidad:</b></h3>
+                <ul><li><b>Crecimiento del sistema: </b> El módulo debe ser capaz de manejar un incremento en la cantidad de solicitudes 
+                    enviadas sin afectar su desempeño. Además, debe ser fácil integrar nuevos destinatarios o categorías de solicitudes 
+                    sin que esto afecte la funcionalidad existente.</li></ul>
+        <hr>
+            <h3><b>6. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividad: </b>El sistema debe registrar el historial de solicitudes enviadas, incluyendo la fecha 
+                    y hora de envío, el nombre del aprendiz, y los destinatarios seleccionados. Estos registros deben ser accesibles para 
+                    el administrador o el instructor, según sea necesario.</li></ul>
+        <hr>
+            <h3><b>7. Compatibilidad con otros módulos:</b></h3>
+                <ul><li><b>Integración con la gestión de mensajes: </b>Las solicitudes enviadas deben ser integradas con el sistema de gestión
+                    de mensajes, lo que permitirá a los destinatarios revisar y responder las solicitudes de manera eficiente.</li></ul>
+        <hr>
+    </div>
+
+    <div>
+        <h2><b>10. Requerimiento No Funcional: Rellenar Formatos (Aprendiz)</b></h3>
+            <p><b>Descripción general: </b>El módulo de "Rellenar Formatos" permite a los aprendices completar y enviar formatos necesarios para 
+                su etapa productiva, como los reportes de avance. Este módulo debe ser rápido, seguro y fácil de usar, garantizando que los datos 
+                ingresados sean validados y almacenados de manera confiable. La funcionalidad debe ser clara, intuitiva y accesible, asegurando 
+                que los formatos se completen correctamente.</p>
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>Al seleccionar un formato para completar, la página de edición debe cargarse en un máximo de 3
+                    segundos. El proceso de envío del formato debe completarse en menos de 4 segundos desde el clic en el botón "Enviar" o 
+                    "Guardar".</li></ul>
+                <ul><li><b>Concurrencia: </b>El sistema debe ser capaz de soportar hasta 50 usuarios completando y enviando formatos simultáneamente 
+                    sin experimentar caídas de rendimiento.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Protección de datos: </b>Todos los datos ingresados en los formularios deben ser transmitidos de manera segura a través de 
+                    cifrado HTTPS, protegiendo la información del aprendiz durante su transmisión.</li></ul>
+                <ul><li><b>Autenticación de usuarios: </b>El aprendiz debe estar autenticado antes de acceder al módulo, garantizando que solo los 
+                    usuarios autorizados puedan completar y enviar los formatos.</li></ul>
+                <ul><li><b>Acceso controlado: </b>Los aprendices solo deben tener acceso a los formatos que les correspondan para su etapa productiva, y 
+                    los datos deben estar protegidos de accesos no autorizados.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz clara y accesible</b>Los formularios de formato deben ser fáciles de navegar, con instrucciones claras sobre qué 
+                    se debe completar en cada campo. Las opciones deben estar bien etiquetadas para evitar confusión.</li></ul>
+                <ul><li><b>Confirmación visual: </b>Después de enviar el formato, el sistema debe mostrar una confirmación clara de que el formato 
+                    ha sido enviado correctamente.</li></ul>
+                <ul><li><b>Validación de campos: </b>El sistema debe validar que todos los campos obligatorios sean completados antes de permitir el 
+                    envío del formato, con mensajes de error claros cuando sea necesario.</li></ul>
+                <ul><li><b>Navegación fluida: </b>Los campos deben ser fáciles de completar, permitiendo al aprendiz guardar avances o enviarlo 
+                    de una vez sin complicaciones.</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Dispositivos y navegadores: </b>El módulo debe ser accesible desde computadoras de escritorio, tabletas y dispositivos 
+                    móviles. El diseño debe ser responsivo, adaptándose a diferentes tamaños de pantalla para facilitar su uso en 
+                    cualquier dispositivo.</li></ul>
+                <ul><li><b>Formatos de entrada: </b>El formulario debe permitir la entrada de datos en diferentes formatos (texto, números, fechas) 
+                    y debe ser compatible con todos los principales navegadores web (Chrome, Firefox, Edge).</li></ul>
+        <hr>
+            <h3><b>5. Escalabilidad:</b></h3>
+                <ul><li><b>Crecimiento del sistema: </b>El módulo debe ser capaz de manejar un aumento en la cantidad de formularios sin afectar la 
+                    experiencia del usuario. Además, debe permitir la integración de nuevos tipos de formatos sin necesidad de 
+                    reestructurar el sistema.</li></ul>
+                <ul><li><b>Actualización de formatos: </b>El sistema debe permitir agregar nuevos formatos o modificar los existentes sin afectar los 
+                    formularios previamente creados o completados.</li></ul>
+        <hr>
+            <h3><b>6. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de actividad: </b>El sistema debe registrar el historial de los formatos enviados, con detalles como el nombre 
+                    del aprendiz, la fecha y hora de envío, y el tipo de formato enviado. Este historial debe estar accesible para los 
+                    administradores y instructores para seguimiento y revisión.</li></ul>
+                <ul><li><b>Historial de envíos: </b>En caso de que un aprendiz decida realizar cambios o actualizaciones en un formato enviado, 
+                    el sistema debe mantener un registro de la versión anterior y la nueva, asegurando que se pueda realizar un 
+                    seguimiento adecuado.</li></ul>
+        <hr>
+            <h3><b>7. Compatibilidad con otros módulos:</b></h3>
+                <ul><li><b>Integración con la gestión de la etapa productiva: </b>Los formatos completados deben ser fácilmente accesibles desde 
+                    otros módulos relacionados con la etapa productiva, permitiendo que instructores o administradores puedan revisar el 
+                    avance del aprendiz</li></ul>
+        <hr>
+    </div>
+
+    <div>
+        
+        <h2><b>11. Requerimiento No Funcional: Horarios (Aprendiz)</b></h3>
+            <p><b>Descripción general: </b>El módulo de "Horarios" permite a los aprendices acceder a la programación de sus clases, actividades y eventos 
+                programados. Este módulo debe ofrecer una visualización clara, accesible y actualizada en tiempo real del calendario semanal, permitiendo 
+                que los aprendices gestionen de manera eficiente sus actividades y tiempos.</p>
+            <h3><b>1. Rendimiento:</b></h3>
+                <ul><li><b>Tiempo de respuesta: </b>El módulo de horarios debe cargar la vista del calendario semanal en un tiempo no mayor a 3 segundos al 
+                    acceder al módulo. Los cambios de vista no deben tardar más de 2 segundos.</li></ul>
+                <ul><li><b>Concurrencia: </b>El sistema debe poder manejar la visualización de horarios para hasta 100 aprendices simultáneamente sin afectar 
+                    el rendimiento o la capacidad de respuesta.</li></ul>
+        <hr>
+            <h3><b>2. Seguridad:</b></h3>
+                <ul><li><b>Protección de datos: </b>La información mostrada sobre los horarios debe ser protegida utilizando cifrado HTTPS para evitar la 
+                    intercepción de datos sensibles.</li></ul>
+                <ul><li><b>Acceso controlado: </b>Solo los aprendices autorizados deben poder acceder a sus propios horarios. Los datos de horarios deben estar 
+                    restringidos a cada usuario y no ser accesibles por otros aprendices.</li></ul>
+        <hr>
+            <h3><b>3. Usabilidad:</b></h3>
+                <ul><li><b>Interfaz intuitiva: </b>El diseño debe ser limpio y fácil de entender, con los horarios claramente organizados por día y hora, sin 
+                    sobrecargar la interfaz con información innecesaria. Los aprendices deben poder navegar fácilmente entre los días y semanas.</li></ul>
+                <ul><li><b>Visualización clara: </b>La vista de calendario debe resaltar claramente los eventos y actividades programadas para cada día, mostrando 
+                    el nombre del curso o actividad, la hora de inicio y finalización, y cualquier otro detalle relevante (como ubicación).</li></ul>
+                <ul><li><b>Accesibilidad: </b>El módulo debe ser accesible desde diferentes dispositivos (computadoras, tabletas, teléfonos móviles) y debe ajustarse 
+                    al tamaño de pantalla disponible, garantizando una experiencia óptima en todas las plataformas.</li></ul>
+                <ul><li><b>Interactividad: </b>El módulo debe ser accesible desde diferentes dispositivos (computadoras, tabletas, teléfonos móviles) y debe ajustarse 
+                    al tamaño de pantalla disponible, garantizando una experiencia óptima en todas las plataformas.</li></ul>
+        <hr>
+            <h3><b>4. Compatibilidad:</b></h3>
+                <ul><li><b>Navegadores y dispositivos</b> El módulo debe ser compatible con los principales navegadores web (Chrome, Firefox, Edge) y con dispositivos 
+                    móviles (iOS, Android). Debe contar con un diseño responsivo que ajuste la interfaz según el tamaño del dispositivo.</li></ul>
+                <ul><li><b>Sincronización: </b>Los horarios deben estar sincronizados con el sistema general para asegurar que los cambios realizados en los horarios 
+                    de clases o actividades sean reflejados en tiempo real en el módulo del aprendiz.</li></ul>
+        <hr>
+            <h3><b>5. Escalabilidad:</b></h3>
+                <ul><li><b>Crecimiento del sistema: </b>El sistema debe estar preparado para gestionar un aumento en la cantidad de usuarios (aprendices) y actividades 
+                    programadas, manteniendo la velocidad de carga y la precisión en la visualización de los horarios sin afectar el rendimiento.</li></ul>
+                <ul><li><b>Adición de nuevas actividades o cambios en horarios: </b>El sistema debe permitir agregar nuevas actividades o modificar horarios de manera 
+                    sencilla y sin interrupciones, con actualizaciones automáticas para todos los usuarios.</li></ul>
+        <hr>
+            <h3><b>6. Trazabilidad:</b></h3>
+                <ul><li><b>Registro de cambios: </b>El sistema debe mantener un registro de cualquier cambio realizado en los horarios, incluyendo las fechas y horas de 
+                    los eventos, actividades o clases, para asegurar que los aprendices tengan acceso a información actualizada en todo momento.</li></ul>
+                <ul><li><b>Historial de eventos: </b>Los aprendices deben poder acceder a un historial de sus actividades pasadas y futuras, para verificar el 
+                    cumplimiento de sus horarios programados.</li></ul>
+        <hr>
+            <h3><b>7. Compatibilidad con otros módulos:</b></h3>
+                <ul><li><b>Integración con otros módulos: </b>El módulo de horarios debe estar completamente integrado con otros módulos del sistema, como los módulos de 
+                    "Asistencia" y "Reportes", para garantizar que las actividades y eventos programados se reflejen adecuadamente en los registros de asistencia y 
+                    reportes generados por los aprendices o instructores.</li></ul>
+        
+    </div>
+
+
+</body>
+<footer>
+    <hr>
+    Regional Huila / Centro de Gestión y Desarrollo Sostenible Surcolombiano Carrera 8 N 7-53, Pitalito-Huila
+</footer>
+</html>
